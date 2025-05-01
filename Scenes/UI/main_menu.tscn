@@ -1,0 +1,209 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpsk61h4g7i0q"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MainMenu.cs" id="1_5bpsv"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5bpsv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.121569, 0.290196, 0.462745, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -291.5
+offset_top = 80.0
+offset_right = 291.5
+offset_bottom = 136.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "REWARDS OF THE KINGDOM"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -164.5
+offset_top = 140.0
+offset_right = 164.5
+offset_bottom = 166.0
+grow_horizontal = 2
+text = "Bible Based Game For The Whole Family"
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -102.0
+offset_right = 149.5
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="StartGameButton" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Start New Game"
+
+[node name="RulesButton" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Game Rules"
+
+[node name="CreditsButton" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="ButtonsContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Quit Game"
+
+[node name="RulesPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="RulesPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RulesPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="RulesPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "RULES OF THE GAME"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RulesPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RulesText" type="RichTextLabel" parent="RulesPanel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "OBJECT OF THE GAME
+
+To realistically show what it's like to be a Christian. Players receive the Gospel as they start down the GOSPEL ROAD. The game moves the players through the challenges of a daily walk with Christ along the PATH OF LIFE, and enables them to accumulate Stars for their Crowns.
+
+SETTING UP THE GAME:
+
+01. Shuffle ACTIVITY CARDS making sure the RAPTURE CARD is among them. Place these cards face down on the box marked ACTIVITY at the side of the game.
+
+02. Shuffle the FRUIT CARDS and place them face down on the box marked FRUIT at the side of the game.
+
+03. Shuffle the SCRIPTURE CARDS and place them face down on the box marked SCRIPTURE at the side of the Game.
+
+04. Select a person to be the STEWARD, for the duration of the game, to handle the STAR POINT, CROWN CARDS, and other related duties."
+
+[node name="BackButton" type="Button" parent="RulesPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "Back to Menu"
+
+[node name="CreditsPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CreditsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="CreditsText" type="RichTextLabel" parent="CreditsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "REWARDS OF THE KINGDOM
+
+Bible Based Game For The Whole Family
+
+Original Game By:
+Fountain Family Games
+
+Digital Adaptation:
+[Your Name/Team]
+
+All Scripture in King James Version"
+
+[node name="BackButton" type="Button" parent="CreditsPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "Back to Menu"
+
+[connection signal="pressed" from="ButtonsContainer/StartGameButton" to="." method="OnStartGameButtonPressed"]
+[connection signal="pressed" from="ButtonsContainer/RulesButton" to="." method="OnRulesButtonPressed"]
+[connection signal="pressed" from="ButtonsContainer/CreditsButton" to="." method="OnCreditsButtonPressed"]
+[connection signal="pressed" from="ButtonsContainer/QuitButton" to="." method="OnQuitButtonPressed"]
+[connection signal="pressed" from="RulesPanel/MarginContainer/VBoxContainer/BackButton" to="." method="OnBackButtonPressed"]
+[connection signal="pressed" from="CreditsPanel/MarginContainer/VBoxContainer/BackButton" to="." method="OnBackButtonPressed"]
