@@ -1,13 +1,11 @@
 {
   "servers": {
     "godot-mcp": {
-      "command": "node",
+      "command": "cmd",
       "args": [
-        "D:\\Github\\rewards-of-the-kingdom\\godot-mcp\\build\\index.js",
-        "--godotPath",
-        "D:\\Github\\Godot_v4.1.1\\Godot.exe"
+        "/c",
+        "D:\\Github\\rewards-of-the-kingdom\\start-godot-mcp.cmd"
       ]
     }
   }
 }
-// This file is used to configure the MCP server for Godot. It specifies the command to run the server and the path to the Godot executable.
