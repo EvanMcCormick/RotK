@@ -1,20 +1,13 @@
 {
-    "servers": {
-      "nx-mcp": {
-        "type": "sse",
-        "url": "http://localhost:9038/sse"
-      },
-      "fetch": {
-        "command": "cmd",
-        "args": ["/c", "uvx", "mcp-server-fetch"]
-      },
-      "filesystem": {
-        "command": "cmd",
-        "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-filesystem", "d:\\Github\\racer"]
-      },
-      "memory": {
-        "command": "cmd", 
-        "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-memory"]
-      }
+  "servers": {
+    "godot-mcp": {
+      "command": "node",
+      "args": [
+        "D:\\Github\\rewards-of-the-kingdom\\godot-mcp\\build\\index.js",
+        "--godotPath",
+        "D:\\Github\\Godot_v4.1.1\\Godot.exe"
+      ]
     }
   }
+}
+// This file is used to configure the MCP server for Godot. It specifies the command to run the server and the path to the Godot executable.
