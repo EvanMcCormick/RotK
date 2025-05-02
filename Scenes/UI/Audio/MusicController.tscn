@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0d2jf1hkjaqo"]
+
+[ext_resource type="Script" path="res://Scripts/Audio/MusicController.cs" id="1_ln2va"]
+
+[node name="MusicController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ln2va")
+
+[node name="MusicControlButton" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 16
+text = "Music Controls"
+
+[node name="MusicControlPanel" type="PopupPanel" parent="."]
+title = "Music Controls"
+size = Vector2i(300, 200)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MusicControlPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 196.0
+theme_override_constants/separation = 15
+
+[node name="TrackName" type="Label" parent="MusicControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "Kingdom Music"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MusicControlPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="VolumeControl" type="VBoxContainer" parent="MusicControlPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MusicControlPanel/VBoxContainer/VolumeControl"]
+layout_mode = 2
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="MusicControlPanel/VBoxContainer/VolumeControl"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="HSeparator2" type="HSeparator" parent="MusicControlPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MusicControlPanel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PrevButton" type="Button" parent="MusicControlPanel/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Previous"
+
+[node name="PlayPauseButton" type="Button" parent="MusicControlPanel/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Pause"
+
+[node name="NextButton" type="Button" parent="MusicControlPanel/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Next"
+
+[node name="ShuffleButton" type="Button" parent="MusicControlPanel/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Shuffle: Off"
