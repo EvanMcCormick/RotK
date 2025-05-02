@@ -1,7 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpsk61h4g7i0q"]
+[gd_scene load_steps=6 format=3 uid="uid://dpsk61h4g7i0q"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.cs" id="1_5bpsv"]
 [ext_resource type="PackedScene" uid="uid://b0d2jf1hkjaqo" path="res://Scenes/UI/Audio/MusicController.tscn" id="2_ibk32"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkh5v"]
+bg_color = Color(0.172549, 0.368627, 0.560784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.705882)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2drm"]
+bg_color = Color(0.231373, 0.47451, 0.713726, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.803922)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b57vu"]
+bg_color = Color(0.12549, 0.286275, 0.439216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.6)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -66,24 +102,36 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkh5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2drm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b57vu")
 text = "Start New Game"
 
 [node name="RulesButton" type="Button" parent="ButtonsContainer"]
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkh5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2drm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b57vu")
 text = "Game Rules"
 
 [node name="CreditsButton" type="Button" parent="ButtonsContainer"]
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkh5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2drm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b57vu")
 text = "Credits"
 
 [node name="QuitButton" type="Button" parent="ButtonsContainer"]
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkh5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2drm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b57vu")
 text = "Quit Game"
 
 [node name="MusicController" parent="." instance=ExtResource("2_ibk32")]
@@ -93,7 +141,7 @@ z_index = 1
 [node name="RulesPanel" type="PopupPanel" parent="."]
 title = "Game Rules"
 size = Vector2i(900, 600)
-visible = true
+visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="RulesPanel"]
 offset_left = 4.0
@@ -143,12 +191,15 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkh5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2drm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b57vu")
 text = "Back to Menu"
 
 [node name="CreditsPanel" type="PopupPanel" parent="."]
 title = "Credits"
 size = Vector2i(600, 400)
-visible = true
+visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="CreditsPanel"]
 offset_left = 4.0
@@ -192,6 +243,9 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkh5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2drm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b57vu")
 text = "Back to Menu"
 
 [connection signal="pressed" from="ButtonsContainer/StartGameButton" to="." method="OnStartGameButtonPressed"]
